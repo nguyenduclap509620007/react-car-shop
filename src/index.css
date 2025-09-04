@@ -1,0 +1,18 @@
+:root {
+  --rounded: 1rem;
+}
+
+/* bố cục khoảng cách chung */
+main.container {
+  min-height: 60vh;
+}
+
+/* card bo góc */
+.card, .carousel-inner {
+  border-radius: var(--rounded);
+}
+
+/* fix chữ trên ảnh dễ đọc hơn */
+.carousel-caption {
+  text-shadow: 0 2px 8px rgba(0,0,0,.6);
+}
