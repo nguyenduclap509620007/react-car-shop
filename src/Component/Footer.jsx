@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer style={{backgroundColor: "#F5F5F5" }}>
+    <footer style={{ backgroundColor: "#F5F5F5" }}>
       <div className="row">
         <div className="col-lg-4 p-4">
           <h4>CỬA HÀNG XE SUPER-SPORT THÀNH PHỐ HỒ CHÍ MINH</h4>
@@ -18,7 +18,17 @@ export default function Footer() {
               <i className="bi bi-envelope-fill"></i> Super-Sport.com.vn
             </a>
           </p>
-          <img src="./images/logo1.png" alt="" className="rounded-circle w-25 shadow-lg" />
+          
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15676.411829111801!2d106.63165384009393!3d10.803426057065462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294558dec8ed%3A0x342a19e08150223d!2zUGjGsOG7nW5nIDEzLCBUw6JuIELDrG5oLCBIbyBDaGkgTWluaCBDaXR5LCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1757390364553!5m2!1sen!2s"
+            width="450"
+            height="200"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Google Map"
+          ></iframe>
         </div>
         <div className="col-lg-4 p-4">
           <h4>VỀ CỬA HÀNG</h4>
@@ -42,8 +52,9 @@ export default function Footer() {
             <li><a href="#">Hướng dẫn liên hệ nhân viên</a></li>
             <li><a href="#">Quy định sử dụng web mua bán</a></li>
           </ul>
+          <img src="/images/logo1.png" alt="" className=" w-75 h-50 shadow-lg rounded-5" />
         </div>
       </div>
     </footer>
   );
-}     
+}
