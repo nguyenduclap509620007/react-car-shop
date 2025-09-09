@@ -21,9 +21,9 @@ export default function Footer() {
           
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15676.411829111801!2d106.63165384009393!3d10.803426057065462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175294558dec8ed%3A0x342a19e08150223d!2zUGjGsOG7nW5nIDEzLCBUw6JuIELDrG5oLCBIbyBDaGkgTWluaCBDaXR5LCBWaWV0bmFt!5e0!3m2!1sen!2s!4v1757390364553!5m2!1sen!2s"
-            width="450"
+            width="400"
             height="200"
-            style={{ border: 0 }}
+            style={{ border: 0 , borderRadius: "25px" }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -52,7 +52,7 @@ export default function Footer() {
             <li><a href="#">Hướng dẫn liên hệ nhân viên</a></li>
             <li><a href="#">Quy định sử dụng web mua bán</a></li>
           </ul>
-          <img src="/images/logo1.png" alt="" className=" w-75 h-50 shadow-lg rounded-5" />
+          <img src="/images/logo1.png" alt="" className=" w-100 h-50 shadow-lg rounded-5" />
         </div>
       </div>
     </footer>
