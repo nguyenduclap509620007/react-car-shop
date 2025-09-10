@@ -52,7 +52,7 @@ export default function Home() {
 			/>
 			{/* Nội dung chính */}
 			<div
-				className="mt-3"
+				className="mt-3 px-2 px-md-5"
 				style={{
 					paddingTop: "70px",
 					position: "relative",
@@ -61,7 +61,7 @@ export default function Home() {
 			>
 				<CarouselHero />
 
-				<section className="container mt-5">
+				<section className="container mt-5 px-0">
 					<motion.h2
 						className="mb-3 text-center fw-bold"
 						initial={{ opacity: 0, y: -40 }}

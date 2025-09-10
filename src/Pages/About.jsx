@@ -10,16 +10,16 @@ export default function About() {
           width: "100%",
           height: "100%",
           zIndex: 0,
-          backgroundImage: "url('./images/banner-bg.png')", // Đổi đường dẫn ảnh nền tại đây
+          backgroundImage: "url('./images/banner-bg.png')",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          opacity: 1, // Có thể chỉnh độ mờ nếu muốn
+          opacity: 1,
         }}
       />
       {/* Nội dung chính */}
       <div
-        className="container text-center my-5"
+        className="container text-center my-5 py-4 px-2 px-md-5"
         style={{
           paddingTop: "70px",
           position: "relative",
@@ -27,20 +27,24 @@ export default function About() {
         }}
       >
         {/* Logo cửa hàng */}
-        <div className="mb-4">
+        <div className="mb-4 d-flex justify-content-center">
           <img
             src="/images/logo1.png"
             alt="SuperCar Store Logo"
+            className="img-fluid"
             style={{
-              width: "200px",
+              width: "250px",
+              maxWidth: "60vw",
               height: "auto",
+              padding: 20,
               borderRadius: "50%",
+              boxShadow: "0 4px 16px rgba(0,0,0,0.15)",
             }}
           />
         </div>
 
-        <h2 className="mb-3">About SuperCar Store</h2>
-        <p className="lead">
+        <h2 className="mb-3 fs-2 fs-md-1">About SuperCar Store</h2>
+        <p className="lead fs-6 fs-md-5">
           <strong>SuperCar Store</strong> là showroom chuyên cung cấp các dòng{" "}
           <em>siêu xe thể thao</em> hàng đầu thế giới. Chúng tôi mang đến trải
           nghiệm mua sắm đẳng cấp, dịch vụ chuyên nghiệp và những chiếc xe
@@ -48,7 +52,10 @@ export default function About() {
           Porsche và McLaren.
         </p>
 
-        <ul className="list-unstyled mt-4">
+        <ul
+          className="list-unstyled mt-4 text-start text-md-center mx-auto"
+          style={{ maxWidth: 500 }}
+        >
           <li>🏎️ Phân phối siêu xe thể thao chính hãng</li>
           <li>💳 Hỗ trợ tài chính & trả góp linh hoạt</li>
           <li>🛠️ Bảo hành chính hãng 5 năm</li>

@@ -42,15 +42,15 @@ export default function Cars() {
           width: "100%",
           height: "100%",
           zIndex: 0,
-          backgroundImage: "url('./images/banner-bg.png')", // Đổi đường dẫn ảnh nền tại đây
+          backgroundImage: "url('./images/banner-bg.png')",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
-          opacity: 1 // Có thể chỉnh độ mờ nếu muốn
+          opacity: 1
         }}
       />
       {/* Nội dung chính */}
-      <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "70px" }}>
+      <div className="container px-2 px-md-5" style={{ position: "relative", zIndex: 1, paddingTop: "70px" }}>
         <motion.h2
           className="my-3 text-center fw-bold"
           initial={{ opacity: 0, y: -30 }}
@@ -118,7 +118,7 @@ export default function Cars() {
           </AnimatePresence>
           {filtered.length === 0 && (
             <motion.p
-              className="text-muted"
+              className="text-muted text-center w-100"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
