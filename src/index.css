@@ -16,3 +16,8 @@ main.container {
 .carousel-caption {
   text-shadow: 0 2px 8px rgba(0,0,0,.6);
 }
+
+/* Tăng thời gian hiệu ứng collapse navbar lên 0.7s (700ms) */
+.navbar .collapsing {
+  transition: height 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}

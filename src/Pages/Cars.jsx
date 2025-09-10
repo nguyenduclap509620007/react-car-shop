@@ -55,7 +55,7 @@ export default function Cars() {
           className="my-3 text-center fw-bold"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4 }}
         >
           All Cars
         </motion.h2>
@@ -65,7 +65,7 @@ export default function Cars() {
           className="row g-3 mb-3"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.3, duration: 0.6 }}
+          transition={{ delay: 0.3, duration: 0.4 }}
         >
           <div className="col-12 col-md-4">
             <input

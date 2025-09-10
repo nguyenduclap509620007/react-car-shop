@@ -66,7 +66,7 @@ export default function Home() {
 						className="mb-3 text-center fw-bold"
 						initial={{ opacity: 0, y: -40 }}
 						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.6 }}
+						transition={{ duration: 0.4 }}
 					>
 						Featured Cars
 					</motion.h2>

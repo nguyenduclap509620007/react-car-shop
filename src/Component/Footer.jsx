@@ -71,7 +71,7 @@ export default function Footer() {
               src="/images/logo1.png"
               alt=""
               className="shadow-lg img-fluid mt-3 rounded-circle"
-              style={{ maxWidth: 180, height: "auto", padding: 10, borderRadius: "50%" }}
+              style={{ maxWidth: 200, height: "auto", padding: 10, borderRadius: "50%", background: "#fff" }}
             />
           </div>
         </div>
