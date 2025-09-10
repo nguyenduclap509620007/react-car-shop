@@ -1,13 +1,18 @@
 import { useMemo, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import CarCard from "../Component/CarCard";
 
 const ALL_CARS = [
-  { id: 1, name: "Toyota Supra", price: 52000, type: "sport", image: "https://images.unsplash.com/photo-1590362891991-f776e747a588?q=80&w=1600&auto=format&fit=crop", desc: "Sport 2 cửa, turbo." },
-  { id: 2, name: "Ford Mustang", price: 61000, type: "sport", image: "https://images.unsplash.com/photo-1502877338535-766e1452684a?q=80&w=1600&auto=format&fit=crop", desc: "Cơ bắp Mỹ." },
-  { id: 3, name: "Lamborghini Urus", price: 230000, type: "suv", image: "https://images.unsplash.com/photo-1606665144661-90c6cc0a7e1b?q=80&w=1600&auto=format&fit=crop", desc: "SUV siêu sang, siêu mạnh." },
-  { id: 4, name: "BMW X5", price: 78000, type: "suv", image: "https://images.unsplash.com/photo-1671126399285-7058704d5563?q=80&w=1600&auto=format&fit=crop", desc: "SUV cao cấp." },
-  { id: 5, name: "Mercedes S-Class", price: 155000, type: "sedan", image: "https://images.unsplash.com/photo-1619767886558-efdc259cde1b?q=80&w=1600&auto=format&fit=crop", desc: "Sedan hạng sang." },
-  { id: 6, name: "Toyota Camry", price: 39000, type: "sedan", image: "https://images.unsplash.com/photo-1616077168079-7f3c4e4d7a73?q=80&w=1600&auto=format&fit=crop", desc: "Sedan bền bỉ, tiết kiệm." },
+  { id: 1, name: "Chevrolet Camaro", price: 26.100, type: "sport", image: "./images/chevroletcamaro.png", desc: "Sport 2 cửa, turbo." },
+  { id: 2, name: "Mazda MX-5 Miata 2023", price: 28.050, type: "sport", image: "./images/MazdaMX-5Miata2023.png", desc: "Cơ bắp Mỹ." },
+  { id: 3, name: "Toyota GR 86", price: 28.400, type: "suv", image: "./images/ToyotaGR86.png", desc: "SUV siêu sang, siêu mạnh." },
+  { id: 4, name: "Subaru BRZ", price: 28.595, type: "suv", image: "./images/SubaruBRZ.png", desc: "SUV cao cấp." },
+  { id: 5, name: "Dodge Challenger", price: 31.100, type: "sedan", image: "./images/DodgeChallenger.png", desc: "Sedan hạng sang." },
+  { id: 6, name: "BMW 230i Coupe", price: 38.200, type: "sedan", image: "./images/BMW230iCoupe.png", desc: "Sedan bền bỉ, tiết kiệm." },
+  { id: 7, name: "Nissan Z", price: 40.990, type: "suv", image: "./images/NissanZ.png", desc: "SUV siêu sang, siêu mạnh." },
+  { id: 8, name: "Toyota GR Supra", price: 44.040, type: "suv", image: "./images/ToyotaGRSupra.png", desc: "SUV cao cấp." },
+  { id: 9, name: "Audi TT Coupe", price: 52.000, type: "sedan", image: "./images/AudiTTCoupe.png", desc: "Sedan hạng sang." },
+  { id: 10, name: "BMW Z4", price: 52.800, type: "sedan", image: "./images/BMWZ4.png", desc: "Sedan bền bỉ, tiết kiệm." },
 ];
 
 export default function Cars() {
@@ -27,42 +32,100 @@ export default function Cars() {
   const handleBuy = (car) => alert(`Bạn đã chọn mua: ${car.name}`);
 
   return (
-    <div className="container">
-      <h2 className="my-3">All Cars</h2>
+    <div style={{ position: "relative", minHeight: "80vh" }}>
+      {/* Ảnh nền cho phần Cars */}
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 0,
+          backgroundImage: "url('./images/banner-bg.png')", // Đổi đường dẫn ảnh nền tại đây
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          opacity: 1 // Có thể chỉnh độ mờ nếu muốn
+        }}
+      />
+      {/* Nội dung chính */}
+      <div className="container" style={{ position: "relative", zIndex: 1, paddingTop: "70px" }}>
+        <motion.h2
+          className="my-3 text-center fw-bold"
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          All Cars
+        </motion.h2>
 
-      {/* Filter bar */}
-      <div className="row g-3 mb-3">
-        <div className="col-12 col-md-4">
-          <input value={q} onChange={e => setQ(e.target.value)} className="form-control" placeholder="Search by name..." />
-        </div>
-        <div className="col-6 col-md-4">
-          <select value={type} onChange={e => setType(e.target.value)} className="form-select">
-            <option value="all">All types</option>
-            <option value="sport">Sport</option>
-            <option value="suv">SUV</option>
-            <option value="sedan">Sedan</option>
-          </select>
-        </div>
-        <div className="col-6 col-md-4">
-          <input
-            type="number"
-            min="0"
-            value={maxPrice}
-            onChange={e => setMaxPrice(e.target.value)}
-            className="form-control"
-            placeholder="Max price (USD)"
-          />
-        </div>
-      </div>
-
-      {/* Grid */}
-      <div className="row g-4">
-        {filtered.map(c => (
-          <div key={c.id} className="col-12 col-sm-6 col-lg-4">
-            <CarCard car={c} onBuy={handleBuy} />
+        {/* Filter bar */}
+        <motion.div
+          className="row g-3 mb-3"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+        >
+          <div className="col-12 col-md-4">
+            <input
+              value={q}
+              onChange={e => setQ(e.target.value)}
+              className="form-control"
+              placeholder="Search by name..."
+            />
           </div>
-        ))}
-        {filtered.length === 0 && <p className="text-muted">Không tìm thấy xe phù hợp.</p>}
+          <div className="col-6 col-md-4">
+            <select
+              value={type}
+              onChange={e => setType(e.target.value)}
+              className="form-select"
+            >
+              <option value="all">All types</option>
+              <option value="sport">Sport</option>
+              <option value="suv">SUV</option>
+              <option value="sedan">Sedan</option>
+            </select>
+          </div>
+          <div className="col-6 col-md-4">
+            <input
+              type="number"
+              min="0"
+              value={maxPrice}
+              onChange={e => setMaxPrice(e.target.value)}
+              className="form-control"
+              placeholder="Max price (USD)"
+            />
+          </div>
+        </motion.div>
+
+        {/* Grid */}
+        <div className="row g-4">
+          <AnimatePresence>
+            {filtered.map((c, i) => (
+              <motion.div
+                key={c.id}
+                className="col-12 col-sm-6 col-lg-4"
+                initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.4, delay: i * 0.1 }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <CarCard car={c} onBuy={handleBuy} />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+          {filtered.length === 0 && (
+            <motion.p
+              className="text-muted"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              Không tìm thấy xe phù hợp.
+            </motion.p>
+          )}
+        </div>
       </div>
     </div>
   );

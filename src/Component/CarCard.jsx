@@ -1,3 +1,5 @@
+import { p } from "framer-motion/client";
+
 export default function CarCard({ car, onBuy }) {
   return (
     <div className="card h-100 shadow-sm">
