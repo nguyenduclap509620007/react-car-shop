@@ -28,7 +28,7 @@ export default function Navbar() {
       }}
     >
       <div className="container">
-        <img src="./images/logo1.png" alt="" style={{ height: 50, width: 50, borderRadius: "50%", marginRight: 10, cursor: "pointer" }} />
+        <img src="/react-car-shop/images/logo1.png" alt="" style={{ height: 50, width: 50, borderRadius: "50%", marginRight: 10, cursor: "pointer" }} />
         <Link className="navbar-brand fw-bold" to="/">SPORT-CARS</Link>
 
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">

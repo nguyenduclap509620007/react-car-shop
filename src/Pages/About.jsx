@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 
 export default function About() {
+  // Lấy baseUrl tự động (local = "/", build = "/react-car-shop/")
+  const baseUrl = import.meta.env.BASE_URL;
+
   return (
     <div style={{ position: "relative", minHeight: "80vh" }}>
       {/* Ảnh nền */}
@@ -12,7 +15,7 @@ export default function About() {
           width: "100%",
           height: "100%",
           zIndex: 0,
-          backgroundImage: "url('./images/banner-bg.png')",
+          backgroundImage: `url(${baseUrl}images/banner-bg.png)`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
@@ -25,7 +28,7 @@ export default function About() {
         className="container text-center my-5 py-4 px-2 px-md-5"
         style={{ paddingTop: "70px", position: "relative", zIndex: 1 }}
       >
-        {/* Logo có hiệu ứng zoom + fade-in */}
+        {/* Logo có hiệu ứng */}
         <motion.div
           className="mb-4 d-flex justify-content-center"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -33,7 +36,7 @@ export default function About() {
           transition={{ duration: 1 }}
         >
           <motion.img
-            src="/images/logo1.png"
+            src={`${baseUrl}images/logo1.png`}
             alt="SuperCar Store Logo"
             className="img-fluid"
             style={{
@@ -73,7 +76,7 @@ export default function About() {
           Porsche và McLaren.
         </motion.p>
 
-        {/* Danh sách với hiệu ứng xuất hiện lần lượt */}
+        {/* Danh sách với hiệu ứng */}
         <motion.ul
           className="list-unstyled mt-4 text-start text-md-center mx-auto"
           style={{ maxWidth: 500 }}

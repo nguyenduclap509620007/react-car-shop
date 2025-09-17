@@ -1,5 +1,7 @@
+// main.jsx
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";  // 👈 thêm dòng này
 import App from "./App.jsx";
 
 // Bootstrap
@@ -10,6 +12,9 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    {/* 👇 Bọc App bằng BrowserRouter và basename */}
+    <BrowserRouter basename="/react-car-shop">
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );

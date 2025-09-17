@@ -1,17 +1,28 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
+// 📝 Kiểm tra tên thư mục Component/Pages trên máy bạn có đúng chữ hoa chữ thường không
 import Navbar from "./Component/Navbar";
 import Footer from "./Component/Footer";
 import Home from "./Pages/Home";
 import Cars from "./Pages/Cars";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
+// Bootstrap CSS
+import "bootstrap/dist/css/bootstrap.min.css";
+
+/**
+ * App.jsx – component chính của ứng dụng.
+ * - Dùng HashRouter để tránh lỗi 404 trên GitHub Pages.
+ * - Navbar + Footer hiển thị ở mọi trang.
+ * - Routes chứa các trang Home, Cars, About, Contact.
+ */
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
+      {/* Thanh điều hướng */}
       <Navbar />
-      {/* Bỏ class container ở đây để các trang con tự kiểm soát layout */}
+
+      {/* Nội dung các trang */}
       <main className="my-4" style={{ minHeight: "80vh" }}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -20,7 +31,9 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>
+
+      {/* Chân trang */}
       <Footer />
-    </BrowserRouter>
+    </HashRouter>
   );
 }

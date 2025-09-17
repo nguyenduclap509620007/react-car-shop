@@ -3,16 +3,16 @@ import { motion, AnimatePresence } from "framer-motion";
 import CarCard from "../Component/CarCard";
 
 const ALL_CARS = [
-  { id: 1, name: "Chevrolet Camaro", price: 26.100, type: "sport", image: "./images/chevroletcamaro.png", desc: "Sport 2 cửa, turbo." },
-  { id: 2, name: "Mazda MX-5 Miata 2023", price: 28.050, type: "sport", image: "./images/MazdaMX-5Miata2023.png", desc: "Cơ bắp Mỹ." },
-  { id: 3, name: "Toyota GR 86", price: 28.400, type: "suv", image: "./images/ToyotaGR86.png", desc: "SUV siêu sang, siêu mạnh." },
-  { id: 4, name: "Subaru BRZ", price: 28.595, type: "suv", image: "./images/SubaruBRZ.png", desc: "SUV cao cấp." },
-  { id: 5, name: "Dodge Challenger", price: 31.100, type: "sedan", image: "./images/DodgeChallenger.png", desc: "Sedan hạng sang." },
-  { id: 6, name: "BMW 230i Coupe", price: 38.200, type: "sedan", image: "./images/BMW230iCoupe.png", desc: "Sedan bền bỉ, tiết kiệm." },
-  { id: 7, name: "Nissan Z", price: 40.990, type: "suv", image: "./images/NissanZ.png", desc: "SUV siêu sang, siêu mạnh." },
-  { id: 8, name: "Toyota GR Supra", price: 44.040, type: "suv", image: "./images/ToyotaGRSupra.png", desc: "SUV cao cấp." },
-  { id: 9, name: "Audi TT Coupe", price: 52.000, type: "sedan", image: "./images/AudiTTCoupe.png", desc: "Sedan hạng sang." },
-  { id: 10, name: "BMW Z4", price: 52.800, type: "sedan", image: "./images/BMWZ4.png", desc: "Sedan bền bỉ, tiết kiệm." },
+  { id: 1, name: "Chevrolet Camaro", price: 26.100, type: "sport", image: "/react-car-shop/images/chevroletcamaro.png", desc: "Sport 2 cửa, turbo." },
+  { id: 2, name: "Mazda MX-5 Miata 2023", price: 28.050, type: "sport", image: "/react-car-shop/images/MazdaMX-5Miata2023.png", desc: "Cơ bắp Mỹ." },
+  { id: 3, name: "Toyota GR 86", price: 28.400, type: "suv", image: "/react-car-shop/images/ToyotaGR86.png", desc: "SUV siêu sang, siêu mạnh." },
+  { id: 4, name: "Subaru BRZ", price: 28.595, type: "suv", image: "/react-car-shop/images/SubaruBRZ.png", desc: "SUV cao cấp." },
+  { id: 5, name: "Dodge Challenger", price: 31.100, type: "sedan", image: "/react-car-shop/images/DodgeChallenger.png", desc: "Sedan hạng sang." },
+  { id: 6, name: "BMW 230i Coupe", price: 38.200, type: "sedan", image: "/react-car-shop/images/BMW230iCoupe.png", desc: "Sedan bền bỉ, tiết kiệm." },
+  { id: 7, name: "Nissan Z", price: 40.990, type: "suv", image: "/react-car-shop/images/NissanZ.png", desc: "SUV siêu sang, siêu mạnh." },
+  { id: 8, name: "Toyota GR Supra", price: 44.040, type: "suv", image: "/react-car-shop/images/ToyotaGRSupra.png", desc: "SUV cao cấp." },
+  { id: 9, name: "Audi TT Coupe", price: 52.000, type: "sedan", image: "/react-car-shop/images/AudiTTCoupe.png", desc: "Sedan hạng sang." },
+  { id: 10, name: "BMW Z4", price: 52.800, type: "sedan", image: "/react-car-shop/images/BMWZ4.png", desc: "Sedan bền bỉ, tiết kiệm." },
 ];
 
 export default function Cars() {
@@ -42,7 +42,7 @@ export default function Cars() {
           width: "100%",
           height: "100%",
           zIndex: 0,
-          backgroundImage: "url('./images/banner-bg.png')",
+          backgroundImage: "url('/react-car-shop/images/banner-bg.png')",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
