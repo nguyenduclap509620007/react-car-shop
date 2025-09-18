@@ -1,7 +1,7 @@
 // main.jsx
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";  // 👈 thêm dòng này
+import { BrowserRouter } from "react-router-dom";  // 👈 dùng BrowserRouter
 import App from "./App.jsx";
 
 // Bootstrap

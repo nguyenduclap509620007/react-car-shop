@@ -8,7 +8,7 @@ const featured = [
 		name: "Chevrolet Camaro",
 		price: 26.1,
 		type: "sport",
-		image: "/images/chevroletcamaro.png",
+		image: "/react-car-shop/images/chevroletcamaro.png",
 		desc: "Sport 2 cửa, turbo.",
 	},
 	{
@@ -16,7 +16,7 @@ const featured = [
 		name: "Mazda MX-5 Miata 2023",
 		price: 28.05,
 		type: "sport",
-		image: "/images/MazdaMX-5Miata2023.png",
+		image: "/react-car-shop/images/MazdaMX-5Miata2023.png",
 		desc: "Cơ bắp Mỹ.",
 	},
 	{
@@ -24,7 +24,7 @@ const featured = [
 		name: "Toyota GR 86",
 		price: 28.4,
 		type: "suv",
-		image: "/images/ToyotaGR86.png",
+		image: "/react-car-shop/images/ToyotaGR86.png",
 		desc: "SUV siêu sang, siêu mạnh.",
 	},
 ];
@@ -43,7 +43,7 @@ export default function Home() {
 					width: "100%",
 					height: "100%",
 					zIndex: 0,
-					backgroundImage: "url('/images/banner-bg.png')", // Đổi đường dẫn ảnh nền tại đây
+					backgroundImage: "url('/react-car-shop/images/banner-bg.png')", // Đổi đường dẫn ảnh nền tại đây
 					backgroundSize: "cover",
 					backgroundRepeat: "no-repeat",
 					backgroundPosition: "center",
