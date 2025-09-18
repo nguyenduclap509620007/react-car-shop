@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://nguyenduclap509620007.github.io/react-car-shop",
+  "homepage": "https://nguyenduclap509620007.github.io/react-car-shop/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -15,7 +15,7 @@ export default function About() {
           width: "100%",
           height: "100%",
           zIndex: 0,
-          backgroundImage: `url(${baseUrl}images/banner-bg.png)`,
+          backgroundImage: `url('${baseUrl}images/banner-bg.png')`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
@@ -71,9 +71,9 @@ export default function About() {
         >
           <strong>SuperCar Store</strong> là showroom chuyên cung cấp các dòng{" "}
           <em>siêu xe thể thao</em> hàng đầu thế giới. Chúng tôi mang đến trải
-          nghiệm mua sắm đẳng cấp, dịch vụ chuyên nghiệp và những chiếc xe
-          chính hãng đến từ các thương hiệu danh giá như Ferrari, Lamborghini,
-          Porsche và McLaren.
+          nghiệm mua sắm đẳng cấp, dịch vụ chuyên nghiệp và những chiếc xe chính
+          hãng đến từ các thương hiệu danh giá như Ferrari, Lamborghini, Porsche
+          và McLaren.
         </motion.p>
 
         {/* Danh sách với hiệu ứng */}

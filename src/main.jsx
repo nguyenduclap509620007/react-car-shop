@@ -13,7 +13,7 @@ import "./index.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     {/* 👇 Bọc App bằng BrowserRouter và basename */}
-    <BrowserRouter basename="/react-car-shop">
+    <BrowserRouter basename="/react-car-shop/">
       <App />
     </BrowserRouter>
   </React.StrictMode>

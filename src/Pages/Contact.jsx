@@ -12,7 +12,7 @@ export default function Contact() {
           width: "100%",
           height: "100%",
           zIndex: 0,
-          backgroundImage: "url('/react-car-shop/images/banner-bg.png')", // Đổi đường dẫn ảnh nền tại đây
+          backgroundImage: "url('/images/banner-bg.png')", // Đổi đường dẫn ảnh nền tại đây
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
