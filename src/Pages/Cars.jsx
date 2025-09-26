@@ -1,6 +1,8 @@
 import { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import CarCard from "../Component/CarCard";
+import "./Cars.css"; // 👉 import CSS riêng
+import CarouselHero from "../Component/Carousel";
 
 const ALL_CARS = [
   { id: 1, name: "Chevrolet Camaro", price: 26.100, type: "sport", image: "/react-car-shop/images/chevroletcamaro.png", desc: "Sport 2 cửa, turbo." },
@@ -13,6 +15,8 @@ const ALL_CARS = [
   { id: 8, name: "Toyota GR Supra", price: 44.040, type: "suv", image: "/react-car-shop/images/ToyotaGRSupra.png", desc: "SUV cao cấp." },
   { id: 9, name: "Audi TT Coupe", price: 52.000, type: "sedan", image: "/react-car-shop/images/AudiTTCoupe.png", desc: "Sedan hạng sang." },
   { id: 10, name: "BMW Z4", price: 52.800, type: "sedan", image: "/react-car-shop/images/BMWZ4.png", desc: "Sedan bền bỉ, tiết kiệm." },
+  { id: 11, name: "Audi TT Coupe", price: 52.000, type: "sedan", image: "/react-car-shop/images/AudiTTCoupe.png", desc: "Sedan hạng sang." },
+  { id: 12, name: "BMW Z4", price: 52.800, type: "sedan", image: "/react-car-shop/images/BMWZ4.png", desc: "Sedan bền bỉ, tiết kiệm." },
 ];
 
 export default function Cars() {
@@ -32,27 +36,17 @@ export default function Cars() {
   const handleBuy = (car) => alert(`Bạn đã chọn mua: ${car.name}`);
 
   return (
-    <div style={{ position: "relative", minHeight: "80vh" }}>
+    <div className="cars-page">
       {/* Ảnh nền cho phần Cars */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          zIndex: 0,
-          backgroundImage: "url('/react-car-shop/images/banner-bg.png')",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          opacity: 1
-        }}
-      />
+      <div className="cars-bg" />
+
       {/* Nội dung chính */}
-      <div className="container px-2 px-md-5" style={{ position: "relative", zIndex: 1, paddingTop: "70px" }}>
+      <div className="container px-2 px-md-5 cars-content">
+        {/* Hero */}
+        <CarouselHero />
+
         <motion.h2
-          className="my-3 text-center fw-bold"
+          className="cars-title"
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
@@ -116,6 +110,7 @@ export default function Cars() {
               </motion.div>
             ))}
           </AnimatePresence>
+
           {filtered.length === 0 && (
             <motion.p
               className="text-muted text-center w-100"

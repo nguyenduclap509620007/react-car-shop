@@ -1,0 +1,16 @@
+.home-wrapper {
+  min-height: 80vh;
+  background-image: url("/react-car-shop/images/banner-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+}
+
+.home-content {
+  padding-top: 70px;
+}
+
+.img-sale {
+  width: 60%;
+}

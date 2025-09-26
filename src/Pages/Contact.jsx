@@ -1,35 +1,20 @@
 import { motion } from "framer-motion";
+import "./Contact.css";
+import CarouselHero from "../Component/Carousel";
 
 export default function Contact() {
   return (
-    <div style={{ position: "relative", minHeight: "80vh" }}>
+    <div className="contact-wrapper">
       {/* Ảnh nền cho phần Contact */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          zIndex: 0,
-          backgroundImage: "url('/react-car-shop/images/banner-bg.png')", // Đổi đường dẫn ảnh nền tại đây
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          opacity: 1, // Có thể chỉnh độ mờ nếu muốn
-        }}
-      />
+      <div className="contact-bg" />
+
       {/* Nội dung chính */}
-      <div
-        className="container my-5"
-        style={{
-          paddingTop: "70px",
-          position: "relative",
-          zIndex: 1,
-        }}
-      >
+      <div className="container contact-content">
+        {/* Hero */}
+        <CarouselHero />
+
         <motion.h2
-          className="text-center mb-4 fw-bold"
+          className="text-center mb-5 mt-3 fw-bold"
           initial={{ opacity: 0, y: -40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -38,23 +23,17 @@ export default function Contact() {
         </motion.h2>
 
         <motion.form
-          className="row g-4 shadow-lg p-4 rounded"
+          className="row g-4 shadow-lg p-4 contact-form"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          style={{
-            background: "rgba(255,255,255,0.7)", // Nền trong suốt mờ
-            backdropFilter: "blur(8px)", // Làm mờ nền phía sau (nếu trình duyệt hỗ trợ)
-            borderRadius: "18px",
-          }}
         >
           {/* Name */}
           <motion.div className="col-md-6">
-            <label className="form-label fw-semibold">Name</label>
+            <label className="form-label fw-semibold">Name <i className="fas fa-user"></i></label>
             <motion.input
-              className="form-control"
+              className="form-control custom-input"
               placeholder="Your name"
-              style={{ borderRadius: "12px" }}
               whileFocus={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 200 }}
             />
@@ -62,12 +41,11 @@ export default function Contact() {
 
           {/* Email */}
           <motion.div className="col-md-6">
-            <label className="form-label fw-semibold">Email</label>
+            <label className="form-label fw-semibold">Email <i className="fas fa-envelope"></i></label>
             <motion.input
               type="email"
-              className="form-control"
+              className="form-control custom-input"
               placeholder="you@example.com"
-              style={{ borderRadius: "12px" }}
               whileFocus={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 200 }}
             />
@@ -75,12 +53,11 @@ export default function Contact() {
 
           {/* Message */}
           <motion.div className="col-12">
-            <label className="form-label fw-semibold">Message</label>
+            <label className="form-label fw-semibold">Message <i className="fas fa-comment-dots"></i></label>
             <motion.textarea
-              className="form-control"
+              className="form-control custom-input"
               rows="4"
               placeholder="How can we help?"
-              style={{ borderRadius: "12px" }}
               whileFocus={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 200 }}
             ></motion.textarea>
@@ -89,12 +66,11 @@ export default function Contact() {
           {/* Button */}
           <div className="col-12 text-center">
             <motion.button
-              className="btn btn-primary px-5 py-2"
+              className="btn btn-primary contact-btn"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
-              style={{ borderRadius: "25px", fontWeight: "600" }}
             >
-              Send Message ✉️
+              Send Message <i className="fas fa-paper-plane"></i>
             </motion.button>
           </div>
         </motion.form>

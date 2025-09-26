@@ -1,0 +1,35 @@
+/* style mặc định cho link */
+.nav-icon-link {
+  color: #000000;
+  transition: transform 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* khi hover */
+.nav-icon-link:hover {
+  color: #ff9900;
+  transform: scale(1.15);
+}
+
+/* khi active */
+.active-link {
+  color: #ff9900 !important;
+  transform: scale(1.03);
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(255, 153, 0, 0.3);
+  border-radius: 6px;
+}
+
+.top-info-bar {
+  background-color: #FF9F00; /* màu cam như hình */
+  font-size: 15px;
+  font-weight: 500;
+  color: #000000;
+  cursor: pointer;
+}
+.top-info-bar i {
+  font-size: 18px;
+  vertical-align: middle;
+  color: #000000;
+  cursor: pointer;
+}
+

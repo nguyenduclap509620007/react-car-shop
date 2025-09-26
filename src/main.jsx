@@ -4,9 +4,10 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";  // 👈 dùng BrowserRouter
 import App from "./App.jsx";
 
-// Bootstrap
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js"; // cần cho Navbar toggle & Carousel
+import 'bootstrap/dist/css/bootstrap.min.css'; // nếu dùng bootstrap
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import 'bootstrap-icons/font/bootstrap-icons.css'; // quan trọng để hiển thị icons
+
 
 import "./index.css";
 

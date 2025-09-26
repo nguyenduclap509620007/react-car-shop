@@ -24,7 +24,12 @@ export default function App() {
       <Navbar />
 
       {/* Nội dung các trang */}
-      <main className="my-4" style={{ minHeight: "80vh" }}>
+      <main 
+      style={{ 
+        minHeight: "80vh", 
+        backgroundColor: "#FF9F00" 
+        }}>
+          
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/cars" element={<Cars />} />

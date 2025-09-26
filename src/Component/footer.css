@@ -1,0 +1,163 @@
+.footer_section {
+  position: relative;
+  padding: 50px 0;
+  color: #000000;
+  overflow: hidden;
+  animation: fadeInFooter 1.5s ease-in-out;
+}
+
+/* Thêm hình nền phía sau */
+.footer_section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/react-car-shop/images/banner-bg.png"); /* 👉 thay đường dẫn ảnh */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Đảm bảo nội dung nằm trên hình nền */
+.footer_section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hiệu ứng fade-in */
+@keyframes fadeInFooter {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footeer_logo {
+  text-align: center; /* 👉 căn giữa */
+  margin-bottom: 20px;
+}
+
+/* Logo có hiệu ứng pulse nhẹ */
+.footeer_logo img {
+  max-width: 200px;
+  animation: pulseLogo 3s infinite;
+  display: inline-block; /* đảm bảo logo căn giữa */
+  border-radius: 15px;
+}
+
+@keyframes pulseLogo {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px #fff);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 15px #ffe259);
+  }
+}
+
+/* Subscribe button độc lạ */
+.subscribe_bt a {
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  background: linear-gradient(90deg, #ff6a00, #ee0979, #ff6a00);
+  background-size: 300%;
+  animation: gradientMove 4s linear infinite;
+  transition: transform 0.3s ease;
+}
+
+.subscribe_bt a:hover {
+  transform: scale(1.1) rotate(-2deg);
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+
+/* Social icons */
+.social_icon {
+  width: 100%;
+  float: left;
+  margin-top: 15px;
+}
+
+.social_icon ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.social_icon li {
+  list-style: none;
+}
+
+.social_icon li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 43px;
+  border-radius: 50%;
+  background: #fff;
+  color: #2e2e2e;
+  font-size: 20px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none; /* 👉 bỏ gạch dưới */
+}
+
+/* Hover: xoay + neon glow */
+.social_icon li a:hover {
+  transform: rotate(360deg) scale(1.2);
+  background: #fe5b29;
+  color: #fff;
+  box-shadow: 0 0 15px #fe5b29, 0 0 25px #ff7e47;
+}
+
+/* Hiệu ứng glow liên tục */
+.social_icon li a::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 10%, transparent 70%);
+  top: -10%;
+  left: -10%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.social_icon li a:hover::after {
+  opacity: 1;
+  animation: glowPulse 1.5s infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.2;
+  }
+}
+
